@@ -1,6 +1,7 @@
 #!/usr/bin/node
 /*
     Print a square with the character #
+    
     The size of the square must be the first argument 
     of the program.
 */
@@ -12,7 +13,7 @@ if (process.argv.length <= 2) {
     process.exit(1);  // Added missing semicolon here
 }
 
-const size = parseInt(process.argv[2], 10);
+const size = parseInt(process.argv[2], 10);  // Changed base from 16 to 10
 
 if (isNaN(size) || size <= 0) {
     process.stderr.write("Invalid size\n");
